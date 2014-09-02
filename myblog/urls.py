@@ -5,10 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'myblog.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-    url(r'',views.hello),
-    url(r'^people/',views.hello),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',views.hello),
+    url(r'^people/$',views.hello),
+    url(r'^admin/$', include(admin.site.urls)),
+    url(r'^people/plus/(\d{1,2})/$', views.plus_time),
 )
