@@ -9,9 +9,15 @@ def show_peoplelist(request):
     #people_list = People.objects.order_by('-age')[:10]
     return render_to_response('peoplelist.html', {})
 
+def index(request):
+    now=datetime.datetime.now()
+    t=get_template('index.html')
+    html=t.render(Context({'people':now}))
+    return HttpResponse(html)
+
 def hello(request):
     now=datetime.datetime.now()
-    t=get_template('test.html')
+    t=get_template('index.html')
     html=t.render(Context({'people':now}))
     return HttpResponse(html)
 
