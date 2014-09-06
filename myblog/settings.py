@@ -81,6 +81,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
-)
+STATICFILES_DIRS = (  
+    'static',  
+)  
+STATIC_ROOT = os.path.join(BASE_DIR,'myblog/static') 
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]

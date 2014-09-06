@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^people/$',views.hello),
     url(r'^admin/$', include(admin.site.urls)),
     url(r'^people/plus/(\d{1,2})/$', views.plus_time),
+url(r'^static/(?P<path>.*)$','django.views.static.serve',),  
 )
