@@ -15,12 +15,8 @@ def index(request):
     html=t.render(Context({'people':now}))
     return HttpResponse(html)
 
-def hello(request):
-    now=datetime.datetime.now()
-    t=get_template('index.html')
-    html=t.render(Context({'people':now}))
+def about(request):
+    t=get_template('about.html')
+    html=t.render(Context())
     return HttpResponse(html)
 
-def plus_time(request,offset):
-    now=int('a-')
-    return HttpResponse("hello,%s" % offset)
