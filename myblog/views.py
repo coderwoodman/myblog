@@ -1,22 +1,13 @@
 from django.shortcuts import render_to_response
-from models import People
-from django.http import HttpResponse
 import datetime
-from django.template import Template,Context
-from django.template.loader import get_template
-
-def show_peoplelist(request):
-    #people_list = People.objects.order_by('-age')[:10]
-    return render_to_response('peoplelist.html', {})
+from models import People
 
 def index(request):
     now=datetime.datetime.now()
-    t=get_template('index.html')
-    html=t.render(Context({'people':now}))
-    return HttpResponse(html)
+    return render_to_response('index.html',{'blogs':now})
 
 def about(request):
-    t=get_template('about.html')
-    html=t.render(Context())
-    return HttpResponse(html)
+    return render_to_response('about.html',{})
 
+def blogList(request):
+    return render_to_response('blog/bloglist.html',{})

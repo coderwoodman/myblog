@@ -84,6 +84,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (  
     'static',  
 )  
-STATIC_ROOT = os.path.join(BASE_DIR,'myblog/static') 
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+# Template files
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
