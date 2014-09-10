@@ -1,5 +1,5 @@
 """
-Django settings for myblog project.
+Django settings for mysites project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -47,9 +47,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'myblog.urls'
+ROOT_URLCONF = 'mysites.urls'
 
-WSGI_APPLICATION = 'myblog.wsgi.application'
+WSGI_APPLICATION = 'mysites.wsgi.application'
 
 
 # Database
@@ -58,7 +58,7 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'myblog',
         'USER': 'root',    
         'PASSWORD': 'jacky983',    
         'HOST': '114.215.154.9',    

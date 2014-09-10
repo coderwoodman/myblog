@@ -14,8 +14,10 @@ def about(request):
 def blogList(request):
     cursor=connection.cursor()
 
-    cursor.execute('select * from test')
+    cursor.execute('select * from blogs')
     names=cursor.fetchall()
+    for row in cursor.fetchall():
+         str=row[0][1]
     s=[names[0][1]]
     return render_to_response('blog/bloglist.html',{'blogname':s})
 
